@@ -1,2 +1,2 @@
 # portfolio
-Portfolio created with react.
+Portfolio created with react and Ts
