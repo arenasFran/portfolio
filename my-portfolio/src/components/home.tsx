@@ -1,8 +1,10 @@
 import './home.css'
+import { IoHomeOutline } from "react-icons/io5";
+import { GrProjects } from "react-icons/gr";
 
 const navItems = [
-    { id: 'home', label: 'Home', glyph: '[]' },
-    { id: 'projects', label: 'Projects', glyph: '->' },
+    { id: 'home', label: 'Home', glyph: <IoHomeOutline /> },
+    { id: 'projects', label: 'Projects', glyph: <GrProjects /> },
     { id: 'experience', label: 'Experience', glyph: '##' },
     { id: 'contact', label: 'Contact', glyph: '@@' },
 ]
