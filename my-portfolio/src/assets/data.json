@@ -1,0 +1,15 @@
+[{
+    "id": 1,
+    "title": "Barbería Santiago Abbona",
+    "description": "This is a project for a barber shop. It includes a website and a booking system."
+},
+{
+    "id": 2,
+    "title": "Project 2",
+    "description": "Description for Project 2"
+},
+{
+    "id": 3,
+    "title": "Project 3",
+    "description": "Description for Project 3"
+}]

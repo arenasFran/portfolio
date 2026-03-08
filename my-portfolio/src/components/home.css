@@ -106,6 +106,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 20;
   height: 100vh;
   width: min(108px, 22vw);
   border-left: 1px solid var(--line);
@@ -118,6 +119,10 @@ body {
 }
 
 .side-link {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
   text-decoration: none;
   color: #9a8f85;
   display: grid;
