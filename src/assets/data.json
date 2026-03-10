@@ -2,6 +2,8 @@
     "id": 1,
     "title": "WeRead",
     "description": "This is a reading app. You can store and rate books you have read, and also share your reading list with friends.",
-    "url": "https://weread-theta.vercel.app/",
+    "liveUrl": "https://weread-theta.vercel.app/",
+    "frontendRepoUrl": "https://github.com/MacDuki/FrontOblFs",
+    "backendRepoUrl": "https://github.com/arenasFran/Obligatorio-Fs",
     "type": "Web + backend"
-}]
+}]  

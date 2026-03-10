@@ -277,6 +277,15 @@ body {
   gap: 0.8rem;
 }
 
+.project-card-actions {
+  margin-left: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.95rem;
+  justify-content: flex-end;
+}
+
 .project-card-badge {
   margin: 0;
   display: inline-flex;
@@ -301,7 +310,6 @@ body {
 }
 
 .project-card-link {
-  margin-left: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.32rem;
@@ -325,6 +333,17 @@ body {
 .project-card-link:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.project-card-link-secondary::after {
+  display: none;
+}
+
+.project-card-link-disabled {
+  color: #9a8f85;
+  border-color: transparent;
+  cursor: default;
+  opacity: 0.85;
 }
 
 @keyframes intro-fade {
@@ -404,5 +423,14 @@ body {
   .project-card {
     padding: 1.05rem;
     border-radius: 14px;
+  }
+
+  .project-card-meta {
+    flex-wrap: wrap;
+  }
+
+  .project-card-actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
