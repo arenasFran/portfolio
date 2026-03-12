@@ -3,10 +3,9 @@ const contactEmail = 'franciscoarenastorres@outlook.com'
 export const Contact = () => {
 	return (
 		<section className="contact-panel" aria-label="Contact form">
-			<p className="kicker">Let's work together</p>
 			<h1 className="projects-title">Contact me</h1>
 			<p className="contact-copy">
-				Share a quick message and your project idea. Your email app will open with the message ready to send.
+				Share your project idea and I'll get back to you.
 			</p>
 
 			<form

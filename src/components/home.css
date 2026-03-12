@@ -410,7 +410,7 @@ body {
 }
 
 .contact-submit {
-  justify-self: start;
+  justify-self: center;
   border: 1px solid #b98953;
   border-radius: 999px;
   background: linear-gradient(180deg, #cc8b41 0%, #b8732a 100%);
