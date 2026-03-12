@@ -9,8 +9,8 @@ function App() {
     <>
       <Navbar section={section} setSection={setSection} />
 
-      <main className="portfolio-shell">
-        <MainContent section={section} />
+      <main className="min-h-screen relative flex items-center justify-center px-[min(9vw,8rem)] py-16 overflow-hidden max-sm:min-h-auto max-sm:py-24 max-sm:px-4">
+        <MainContent section={section} setSection={setSection} />
       </main>
     </>
   )
