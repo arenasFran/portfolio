@@ -346,6 +346,93 @@ body {
   opacity: 0.85;
 }
 
+.contact-panel {
+  width: min(760px, 100% - 2rem);
+  margin: 0 auto;
+  animation: intro-fade 360ms ease-out;
+}
+
+.contact-copy {
+  margin: 0.9rem auto 0;
+  max-width: 58ch;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.contact-form {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 34%);
+  box-shadow: 0 8px 24px rgb(66 50 36 / 6%);
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-field span {
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.75rem;
+  color: #8b776a;
+  font-weight: 700;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid #d8cfc1;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 72%);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.78rem 0.88rem;
+  transition: border-color 170ms ease, box-shadow 170ms ease;
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(191 123 47 / 14%);
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 1px solid #b98953;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #cc8b41 0%, #b8732a 100%);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgb(80 52 24 / 20%);
+  filter: brightness(1.02);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
 @keyframes intro-fade {
   from {
     opacity: 0;
@@ -432,5 +519,14 @@ body {
   .project-card-actions {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .contact-panel {
+    width: 100%;
+    padding: 0 0.2rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
   }
 }
