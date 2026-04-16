@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar section={section} setSection={setSection} />
 
-      <main className="min-h-screen relative flex items-center justify-center px-[min(9vw,8rem)] py-16 overflow-hidden max-sm:min-h-auto max-sm:py-24 max-sm:px-4">
+      <main className="min-h-screen relative flex items-center justify-center px-[min(9vw,8rem)] py-16 overflow-hidden max-sm:min-h-auto max-sm:py-24 max-sm:px-4 max-sm:pb-24">
         <MainContent section={section} setSection={setSection} />
       </main>
     </>

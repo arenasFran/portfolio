@@ -18,7 +18,7 @@ type NavbarProps = {
 
 export const Navbar = ({ section, setSection }: NavbarProps) => {
   return (
-    <aside className="fixed right-0 top-0 z-20 h-screen w-[min(108px,22vw)] border-l border-line flex flex-col justify-center gap-6 p-4 bg-gradient-to-b from-transparent to-white/[0.16] max-lg:w-24 max-sm:static max-sm:top-auto max-sm:right-0 max-sm:left-0 max-sm:w-full max-sm:h-[72px] max-sm:border-l-0 max-sm:border-t max-sm:flex-row max-sm:justify-around max-sm:gap-0 max-sm:bg-paper-deep" aria-label="Section links">
+    <aside className="fixed right-0 top-0 z-20 h-screen w-[min(108px,22vw)] border-l border-line flex flex-col justify-center gap-6 p-4 bg-gradient-to-b from-transparent to-white/[0.16] max-lg:w-24 max-sm:fixed max-sm:bottom-0 max-sm:top-auto max-sm:right-0 max-sm:left-0 max-sm:w-full max-sm:h-[72px] max-sm:border-l-0 max-sm:border-t max-sm:flex-row max-sm:justify-around max-sm:gap-0 max-sm:bg-paper-deep" aria-label="Section links">
       {navItems.map((item) => (
         <button
           key={item.id}
