@@ -7,7 +7,6 @@ type ProjectItem = {
     url?: string;
     liveUrl?: string;
     type: string;
-    githubUrl?: string;
     frontendRepoUrl?: string;
     backendRepoUrl?: string;
 };
@@ -21,11 +20,7 @@ export const Projects = ()=>{
             : 'text-sm font-semibold text-ink no-underline transition-colors duration-200';
 
         if (!href) {
-            return (
-                <span className="text-[#a9a9a9] text-sm font-medium cursor-default" aria-disabled="true">
-                    {label}
-                </span>
-            );
+            return null;
         }
 
         return (
@@ -53,7 +48,7 @@ export const Projects = ()=>{
                         </div>
                         <p className="mt-3 text-muted text-[1.05rem] leading-relaxed">{p.description}</p>
                         <div className="mt-5 flex items-center gap-4 flex-wrap">
-                            {renderAction('Frontend', p.frontendRepoUrl || p.githubUrl, true)}
+                            {renderAction('Frontend', p.frontendRepoUrl, true)}
                             {renderAction('Backend', p.backendRepoUrl, true)}
                             <span className="flex-1"></span>
                             {renderAction('Live Demo', p.liveUrl || p.url)}

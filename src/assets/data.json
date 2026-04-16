@@ -1,9 +1,18 @@
-[{
+[
+  {
     "id": 1,
     "title": "WeRead",
-    "description": "This is a reading app. You can store and rate books you have read, and also share your reading list with friends.",
+    "description": "Aplicación web para gestión de lecturas donde los usuarios pueden registrar libros, calificarlos y compartir su biblioteca personal. Incluye autenticación, manejo de datos dinámicos y comunicación entre frontend y backend para persistencia de información.",
     "liveUrl": "https://weread-theta.vercel.app/",
     "frontendRepoUrl": "https://github.com/MacDuki/FrontOblFs",
     "backendRepoUrl": "https://github.com/arenasFran/Obligatorio-Fs",
-    "type": "Web + backend"
-}]  
+    "type": "Web + Backend"
+  },
+  {
+    "id": 2,
+    "title": "Centro Viena Web",
+    "description": "Catálogo digital de productos orientado al rubro ferretería y bazar. Permite explorar artículos de forma rápida y responsive, sin e-commerce tradicional. La interacción comercial se realiza mediante integración directa con WhatsApp. Los datos se gestionan de forma estática mediante JSON, priorizando simplicidad y rendimiento.",
+    "liveUrl": "https://weread-theta.vercel.app/",
+    "type": "Web (Frontend)"
+  }
+]
