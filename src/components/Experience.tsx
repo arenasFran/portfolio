@@ -22,7 +22,7 @@ const experiences: ExperienceItem[] = [
   {
     role: 'Frontend Developer',
     company: 'Centro Viena (Client Project)',
-    date: '2025',
+    date: 'Mar 2026',
     description: 'Developed a product catalog web application with a focus on performance and usability, simulating an e-commerce experience without checkout by integrating direct WhatsApp contact for inquiries.',
     technologies: ['React', 'TypeScript', 'Tailwind', 'Vite'],
   },

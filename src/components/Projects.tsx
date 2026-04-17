@@ -7,6 +7,7 @@ type ProjectItem = {
     url?: string;
     liveUrl?: string;
     type: string;
+    freelance?: boolean;
     frontendRepoUrl?: string;
     backendRepoUrl?: string;
 };
@@ -40,7 +41,14 @@ export const Projects = ()=>{
                 {projects.map((p)=>(
                     <article key={p.id} className="border border-line rounded-2xl p-6 bg-white/[0.3] shadow-[0_8px_24px_rgba(66,50,36,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9b7a3] hover:shadow-[0_12px_32px_rgba(66,50,36,0.1)]">
                         <div className="flex items-start justify-between gap-4 flex-wrap">
-                            <h2 className="m-0 text-[clamp(1.35rem,2.8vw,1.65rem)] leading-[1.2]">{p.title}</h2>
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <h2 className="m-0 text-[clamp(1.35rem,2.8vw,1.65rem)] leading-[1.2]">{p.title}</h2>
+                                {p.freelance && (
+                                    <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent ring-1 ring-accent/20">
+                                        Freelance
+                                    </span>
+                                )}
+                            </div>
                             <span className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1 border border-[#d8c7b1] rounded-full bg-white/[0.46] text-[#8b6b47] text-xs font-semibold tracking-wide">
                                 <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                                 {p.type}
