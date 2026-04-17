@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Centro Viena Web",
     "description": "Catálogo digital de productos orientado al rubro ferretería y bazar. Permite explorar artículos de forma rápida y responsive, sin e-commerce tradicional. La interacción comercial se realiza mediante integración directa con WhatsApp. Los datos se gestionan de forma estática mediante JSON, priorizando simplicidad y rendimiento.",
-    "liveUrl": "https://weread-theta.vercel.app/",
+    "liveUrl": "/",
     "type": "Web (Frontend)",
     "client": "Centro Viena",
     "freelance": true
