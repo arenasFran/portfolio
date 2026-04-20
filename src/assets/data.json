@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "WeRead",
-    "description": "Aplicación web para gestión de lecturas donde los usuarios pueden registrar libros, calificarlos y compartir su biblioteca personal. Incluye autenticación, manejo de datos dinámicos y comunicación entre frontend y backend para persistencia de información.",
+    "description": "Web application for reading management where users can log books, rate them and share their personal library. Includes authentication, dynamic data handling and frontend-backend communication for data persistence.",
     "liveUrl": "https://weread-theta.vercel.app/",
     "frontendRepoUrl": "https://github.com/MacDuki/FrontOblFs",
     "backendRepoUrl": "https://github.com/arenasFran/Obligatorio-Fs",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Centro Viena Web",
-    "description": "Catálogo digital de productos orientado al rubro ferretería y bazar. Permite explorar artículos de forma rápida y responsive, sin e-commerce tradicional. La interacción comercial se realiza mediante integración directa con WhatsApp. Los datos se gestionan de forma estática mediante JSON, priorizando simplicidad y rendimiento.",
+    "description": "Digital product catalog for the hardware and general store industry. Allows users to browse items quickly with a fully responsive layout, without traditional e-commerce. Commercial interaction is handled through direct WhatsApp integration. Data is managed statically via JSON, prioritizing simplicity and performance.",
     "liveUrl": "/",
     "type": "Web (Frontend)",
     "client": "Centro Viena",
