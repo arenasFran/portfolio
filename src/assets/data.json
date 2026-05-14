@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Centro Viena Web",
     "description": "Digital product catalog for the hardware and general store industry. Allows users to browse items quickly with a fully responsive layout, without traditional e-commerce. Commercial interaction is handled through direct WhatsApp integration. Data is managed statically via JSON, prioritizing simplicity and performance.",
-    "liveUrl": "/",
+    "liveUrl": "https://www.centroviena.com",
     "type": "Web (Frontend)",
     "client": "Centro Viena",
     "freelance": true
