@@ -236,7 +236,9 @@ section:not(#hero) { width: min(100% - 3rem, 1080px); margin: 0 auto; padding: 6
 .project-card:nth-child(2) .project-link { color: var(--accent2); }
 .project-link:hover { background: var(--accent); color: var(--bg); }
 .project-card:nth-child(2) .project-link:hover { background: var(--accent2); color: var(--bg); }
-.project-desc { position: relative; z-index: 1; max-width: 48ch; color: var(--muted); font-size: .78rem; line-height: 1.75; }
+.project-desc { position: relative; z-index: 1; max-width: 48ch; min-height: 8.75em; color: var(--muted); font-size: .78rem; line-height: 1.75; }
+.project-site { position: relative; z-index: 1; align-self: flex-start; color: var(--accent); font-size: .68rem; text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+.project-card:nth-child(2) .project-site { color: var(--accent2); text-decoration-color: color-mix(in srgb, var(--accent2) 45%, transparent); }
 .project-tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .4rem; margin-top: auto; }
 .project-tag { padding: .22rem .55rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text); font-size: .6rem; }
 
