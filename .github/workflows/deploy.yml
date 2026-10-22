@@ -15,8 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-scan-push:
-    name: Build, Scan & Push Docker Image
+  build-scan:
+    name: Build & Security Scan (Trivy)
     runs-on: ubuntu-latest
 
     steps:
@@ -44,15 +44,68 @@ jobs:
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
 
+      - name: Guardar imagen escaneada
+        run: docker save "portfolio:${GITHUB_SHA}" -o portfolio-image.tar
+
+      - name: Subir imagen como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-image
+          path: portfolio-image.tar
+          retention-days: 1
+          compression-level: 0
+
+  quality:
+    name: Análisis de calidad (SonarCloud)
+    runs-on: ubuntu-latest
+    needs: build-scan
+
+    steps:
+      - name: Checkout código completo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Analizar código y verificar Quality Gate
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.qualitygate.wait=true
+            -Dsonar.qualitygate.timeout=600
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: quality
+
+    steps:
+      - name: Simular tests
+        run: echo "Tests pendientes — se implementan en el siguiente paso"
+
+  publish:
+    name: Publicar imagen en Docker Hub
+    runs-on: ubuntu-latest
+    needs: [build-scan, quality, test]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+
+    steps:
+      - name: Descargar imagen escaneada
+        uses: actions/download-artifact@v4
+        with:
+          name: portfolio-image
+
+      - name: Cargar imagen Docker
+        run: docker load --input portfolio-image.tar
+
       - name: Login a Docker Hub
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Publicar imagen en Docker Hub
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      - name: Publicar tags latest y SHA
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
@@ -65,19 +118,10 @@ jobs:
           docker push "${DOCKERHUB_USERNAME}/lab-github-actions:${GITHUB_SHA}"
           docker push "${DOCKERHUB_USERNAME}/lab-github-actions:latest"
 
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    needs: build-scan-push
-
-    steps:
-      - name: Simular tests
-        run: echo "Tests pendientes — se implementan en el siguiente paso"
-
   deploy:
     name: Deploy a GitHub Pages
     runs-on: ubuntu-latest
-    needs: [build-scan-push, test]
+    needs: [publish, quality, test]
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
 
     permissions:
@@ -101,7 +145,7 @@ jobs:
           mkdir -p dist
           cp index.html style.css theme.js dist/
 
-      - name: Subir artefacto
+      - name: Subir artefacto de Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
