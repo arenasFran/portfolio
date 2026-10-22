@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tu Nombre — Portfolio DevOps</title>
+  <title>Francisco Arenas Torres — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -12,9 +12,9 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#hero" class="nav-logo">TU_NOMBRE</a>
+    <a href="#hero" class="nav-logo" aria-label="Francisco Arenas Torres, inicio">FA<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#skills">Habilidades</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#education">Educación</a></li>
       <li><a href="#contact">Contacto</a></li>
@@ -24,17 +24,30 @@
 
   <!-- HERO -->
   <section id="hero">
-    <p class="hero-tag">👋 Hola, soy</p>
-    <h1 class="hero-name">Tu <span>Nombre</span></h1>
-    <p class="hero-role">DevOps Engineer</p>
-    <p class="hero-desc">
-      <!-- TODO: escribí una descripción breve sobre vos, tu enfoque y lo que te apasiona -->
-      Estudiante de DevOps apasionado por la automatización, la infraestructura como código
-      y las prácticas de entrega continua. Actualmente completando el Certificado DevOps en ORT ATI.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-      <a href="#contact" class="btn btn-outline">Contacto</a>
+    <div class="hero-copy">
+      <p class="hero-tag"><span class="hero-tag-line"></span> Del concepto al producto digital</p>
+      <h1 class="hero-name">Francisco<br /><span>Arenas Torres</span></h1>
+      <p class="hero-role">Desarrollador web <span>full stack</span></p>
+      <p class="hero-desc">
+        Desarrollo aplicaciones web de punta a punta: desde interfaces claras para las personas
+        hasta APIs y servicios que las hacen funcionar. Me gusta resolver problemas reales con
+        tecnología y trabajar en proyectos para negocios locales.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Explorar proyectos <span aria-hidden="true">↘</span></a>
+        <a href="#contact" class="btn btn-outline">Hablemos</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-visual-orbit hero-visual-orbit-one"></div>
+      <div class="hero-visual-orbit hero-visual-orbit-two"></div>
+      <div class="hero-visual-core">FA<span>.</span></div>
+      <div class="hero-visual-card">
+        <span class="visual-card-label">DESARROLLO WEB / 01</span>
+        <strong>FRONTEND<br />+ BACKEND</strong>
+        <span class="visual-card-stack">React · TypeScript · Node.js</span>
+      </div>
+      <span class="hero-visual-caption">IDEAS QUE SE PUEDEN USAR</span>
     </div>
   </section>
 
@@ -42,80 +55,86 @@
 
   <!-- SKILLS -->
   <section id="skills">
-    <p class="section-label">// habilidades</p>
-    <h2 class="section-title">Stack técnico</h2>
+    <p class="section-label">01 / Lo que uso</p>
+    <h2 class="section-title">Herramientas para<br /><span>resolver problemas.</span></h2>
     <div class="skills-grid">
 
       <div class="skill-card">
         <div class="skill-card-title">
           <span class="skill-dot"></span>
-          Control de versiones
+          Frontend
         </div>
         <ul class="skill-list">
-          <!-- TODO: editá los tags con tus herramientas reales -->
+          <li class="skill-tag">React</li>
+          <li class="skill-tag">TypeScript</li>
+          <li class="skill-tag">JavaScript</li>
+          <li class="skill-tag">HTML & CSS</li>
+          <li class="skill-tag">Tailwind CSS</li>
+          <li class="skill-tag">Vite</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">
+          <span class="skill-dot"></span>
+          Backend
+        </div>
+        <ul class="skill-list">
+          <li class="skill-tag">Node.js</li>
+          <li class="skill-tag">Express</li>
+          <li class="skill-tag">MongoDB</li>
+          <li class="skill-tag">APIs REST</li>
+          <li class="skill-tag">JWT</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">
+          <span class="skill-dot"></span>
+          Estado e interfaces
+        </div>
+        <ul class="skill-list">
+          <li class="skill-tag">Redux Toolkit</li>
+          <li class="skill-tag">React Router</li>
+          <li class="skill-tag">Framer Motion</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">
+          <span class="skill-dot"></span>
+          Servicios e integraciones
+        </div>
+        <ul class="skill-list">
+          <li class="skill-tag">Mercado Pago</li>
+          <li class="skill-tag">Cloudinary</li>
+          <li class="skill-tag">Telegram Bot</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-title">
+          <span class="skill-dot"></span>
+          Calidad y herramientas
+        </div>
+        <ul class="skill-list">
           <li class="skill-tag">Git</li>
           <li class="skill-tag">GitHub</li>
-          <li class="skill-tag">GitLab</li>
+          <li class="skill-tag">Vitest</li>
+          <li class="skill-tag">Jest</li>
+          <li class="skill-tag">Playwright</li>
         </ul>
       </div>
 
       <div class="skill-card">
         <div class="skill-card-title">
           <span class="skill-dot"></span>
-          CI/CD
+          Diseño web
         </div>
         <ul class="skill-list">
-          <li class="skill-tag">GitHub Actions</li>
-          <li class="skill-tag">Jenkins</li>
-          <li class="skill-tag">ArgoCD</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-title">
-          <span class="skill-dot"></span>
-          Contenedores
-        </div>
-        <ul class="skill-list">
-          <li class="skill-tag">Docker</li>
-          <li class="skill-tag">Kubernetes</li>
-          <li class="skill-tag">Helm</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-title">
-          <span class="skill-dot"></span>
-          Cloud & IaC
-        </div>
-        <ul class="skill-list">
-          <li class="skill-tag">AWS</li>
-          <li class="skill-tag">Terraform</li>
-          <li class="skill-tag">Ansible</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-title">
-          <span class="skill-dot"></span>
-          Scripting
-        </div>
-        <ul class="skill-list">
-          <li class="skill-tag">Bash</li>
-          <li class="skill-tag">Python</li>
-          <li class="skill-tag">YAML</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-card-title">
-          <span class="skill-dot"></span>
-          Observabilidad
-        </div>
-        <ul class="skill-list">
-          <li class="skill-tag">Prometheus</li>
-          <li class="skill-tag">Grafana</li>
-          <li class="skill-tag">ELK Stack</li>
+          <li class="skill-tag">Diseño responsive</li>
+          <li class="skill-tag">Accesibilidad</li>
+          <li class="skill-tag">SEO técnico</li>
         </ul>
       </div>
 
@@ -126,57 +145,44 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <p class="section-label">// proyectos</p>
-    <h2 class="section-title">Lo que construí</h2>
+    <p class="section-label">02 / Trabajo seleccionado</p>
+    <h2 class="section-title">Proyectos con<br /><span>un propósito real.</span></h2>
     <div class="projects-grid">
 
       <div class="project-card">
         <div class="project-header">
-          <span class="project-name">Pipeline CI/CD</span>
-          <!-- TODO: reemplazá # con el link real del proyecto -->
-          <a href="#" class="project-link">↗ ver repo</a>
+          <span class="project-name">Sistema de gestión<br />para barbería</span>
+          <a href="https://github.com/arenasFran/proyecto-integrador-Pedro-Fran" class="project-link" target="_blank" rel="noopener noreferrer">↗ ver repo</a>
         </div>
         <p class="project-desc">
-          <!-- TODO: describí tu proyecto real -->
-          Pipeline automatizado con GitHub Actions que ejecuta tests, build de imagen Docker
-          y deploy a un cluster de Kubernetes en cada push a main.
+          Aplicación full stack para gestionar una barbería: reservas de turnos, administración,
+          clientes, servicios, pagos y membresías. Incluye frontend en React y API backend con
+          autenticación y persistencia de datos.
         </p>
         <div class="project-tags">
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">Docker</span>
-          <span class="project-tag">Kubernetes</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">Express</span>
+          <span class="project-tag">MongoDB</span>
+          <span class="project-tag">Mercado Pago</span>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <span class="project-name">Infraestructura con Terraform</span>
-          <a href="#" class="project-link">↗ ver repo</a>
+          <span class="project-name">Tienda online<br />Centro Viena</span>
+          <a href="https://github.com/arenasFran/barracaViena" class="project-link" target="_blank" rel="noopener noreferrer">↗ ver repo</a>
         </div>
         <p class="project-desc">
-          Definición de infraestructura en AWS usando Terraform: VPC, EC2, RDS y S3
-          con gestión de estado remoto en S3 + DynamoDB.
+          Sitio de comercio electrónico para una barraca local. Permite explorar productos por
+          categorías y marcas, buscar artículos, armar un carrito y solicitar cotizaciones.
         </p>
         <div class="project-tags">
-          <span class="project-tag">Terraform</span>
-          <span class="project-tag">AWS</span>
-          <span class="project-tag">IaC</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-name">Portfolio DevOps</span>
-          <a href="#" class="project-link">↗ ver repo</a>
-        </div>
-        <p class="project-desc">
-          Este mismo portfolio: publicado con GitHub Pages y GitHub Actions.
-          Deploy automático en cada push a main.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">GitHub Pages</span>
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">HTML/CSS</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">Tailwind CSS</span>
+          <span class="project-tag">Cloudinary</span>
         </div>
       </div>
 
@@ -187,25 +193,16 @@
 
   <!-- EDUCATION -->
   <section id="education">
-    <p class="section-label">// educación</p>
-    <h2 class="section-title">Formación</h2>
+    <p class="section-label">03 / Formación</p>
+    <h2 class="section-title">Aprender para<br /><span>seguir construyendo.</span></h2>
     <div class="edu-list">
 
       <div class="edu-item">
-        <span class="edu-year">2024 — 2025</span>
+        <span class="edu-year">2024 — en curso</span>
         <div>
-          <p class="edu-title">Certificado DevOps</p>
-          <!-- TODO: completá con tu institución real -->
-          <p class="edu-institution">ORT ATI — Escuela de Tecnología</p>
-        </div>
-      </div>
-
-      <div class="edu-item">
-        <!-- TODO: agregá tu educación real -->
-        <span class="edu-year">20XX — 20XX</span>
-        <div>
-          <p class="edu-title">Tu título o carrera</p>
-          <p class="edu-institution">Tu institución</p>
+          <p class="edu-title">Analista en Tecnologías de la Información</p>
+          <p class="edu-institution">Universidad ORT Uruguay — cursando el último año</p>
+          <p class="edu-institution">Título intermedio obtenido en 2026: Analista Programador (2024–2026)</p>
         </div>
       </div>
 
@@ -216,27 +213,24 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <p class="section-label">// contacto</p>
-    <h2 class="section-title">Trabajemos juntos</h2>
+    <p class="section-label">04 / Próximo paso</p>
+    <h2 class="section-title">¿Tenés una idea?<br /><span>Hagámosla realidad.</span></h2>
     <p class="contact-desc">
       ¿Tenés una oportunidad o proyecto interesante? Escribime.
     </p>
     <div class="contact-links">
-      <!-- TODO: reemplazá los href con tus links reales -->
-      <a href="mailto:tu@email.com" class="contact-link">
-        <span class="contact-icon">✉</span> tu@email.com
+      <a href="mailto:franciscoarenastorres@outlook.com" class="contact-link">
+        <span class="contact-icon">✉</span> franciscoarenastorres@outlook.com
       </a>
-      <a href="https://github.com/tu-usuario" class="contact-link" target="_blank">
-        <span class="contact-icon">⌥</span> GitHub
-      </a>
-      <a href="https://linkedin.com/in/tu-usuario" class="contact-link" target="_blank">
-        <span class="contact-icon">◈</span> LinkedIn
+      <a href="https://github.com/arenasFran" class="contact-link" target="_blank" rel="noopener noreferrer">
+        <span class="contact-icon">⌥</span> github.com/arenasFran
       </a>
     </div>
   </section>
 
   <footer>
-    Hecho con Git, GitHub Pages y mucho <span>☕</span> — <span>TU_NOMBRE</span>
+    <!-- Mate emoji artwork by Twemoji, licensed under CC BY 4.0. -->
+    Hecho con código y mucho <img class="mate-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f9c9.svg" alt="mate" /> — <span>Francisco Arenas Torres</span>
   </footer>
 
 
