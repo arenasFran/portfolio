@@ -224,7 +224,7 @@ section:not(#hero) { width: min(100% - 3rem, 1080px); margin: 0 auto; padding: 6
   background: linear-gradient(145deg, color-mix(in srgb, var(--bg2) 96%, var(--accent) 4%), var(--bg2));
   transition: transform .25s ease, border-color .25s ease;
 }
-.project-card::before { position: absolute; z-index: 1; top: 1.4rem; left: clamp(1.3rem, 3vw, 2rem); color: var(--accent); content: 'CASO / 0' counter(selected-work); font-size: .57rem; letter-spacing: .14em; }
+.project-card::before { position: absolute; z-index: 1; top: 1.4rem; left: clamp(1.3rem, 3vw, 2rem); color: var(--accent); content: 'PROYECTO / 0' counter(selected-work); font-size: .57rem; letter-spacing: .14em; }
 .project-card:nth-child(2)::before { color: var(--accent2); }
 .project-card::after { position: absolute; right: -60px; bottom: -90px; width: 220px; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent); border-radius: 50%; box-shadow: 0 0 0 22px color-mix(in srgb, var(--accent) 3%, transparent), 0 0 0 44px color-mix(in srgb, var(--accent) 2%, transparent); content: ''; pointer-events: none; }
 .project-card:nth-child(2)::after { border-color: color-mix(in srgb, var(--accent2) 25%, transparent); box-shadow: 0 0 0 22px color-mix(in srgb, var(--accent2) 4%, transparent), 0 0 0 44px color-mix(in srgb, var(--accent2) 2%, transparent); }
