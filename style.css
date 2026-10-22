@@ -231,14 +231,13 @@ section:not(#hero) { width: min(100% - 3rem, 1080px); margin: 0 auto; padding: 6
 .project-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
 .project-card:nth-child(2):hover { border-color: color-mix(in srgb, var(--accent2) 60%, transparent); }
 .project-header { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: .8rem; }
-.project-name { font: 700 clamp(1.15rem, 2vw, 1.5rem)/1.06 var(--font-head); letter-spacing: -.04em; }
+.project-name { flex: 1; min-width: 0; font: 700 clamp(1.15rem, 2vw, 1.5rem)/1.06 var(--font-head); letter-spacing: -.04em; }
+.project-actions { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-end; gap: .35rem; }
 .project-link { flex: 0 0 auto; padding: .35rem .65rem; border: 1px solid var(--border); border-radius: 999px; color: var(--accent); font-size: .62rem; text-decoration: none; transition: background .2s ease, color .2s ease; }
 .project-card:nth-child(2) .project-link { color: var(--accent2); }
 .project-link:hover { background: var(--accent); color: var(--bg); }
 .project-card:nth-child(2) .project-link:hover { background: var(--accent2); color: var(--bg); }
-.project-desc { position: relative; z-index: 1; max-width: 48ch; min-height: 8.75em; color: var(--muted); font-size: .78rem; line-height: 1.75; }
-.project-site { position: relative; z-index: 1; align-self: flex-start; color: var(--accent); font-size: .68rem; text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: .2em; overflow-wrap: anywhere; }
-.project-card:nth-child(2) .project-site { color: var(--accent2); text-decoration-color: color-mix(in srgb, var(--accent2) 45%, transparent); }
+.project-desc { position: relative; z-index: 1; max-width: 48ch; color: var(--muted); font-size: .78rem; line-height: 1.75; }
 .project-tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .4rem; margin-top: auto; }
 .project-tag { padding: .22rem .55rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text); font-size: .6rem; }
 
